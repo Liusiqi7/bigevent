@@ -11,7 +11,7 @@
     <!-- logo图片 -->
     <img id="logo" src="./assets/images/logo.png" alt="">
     <!-- 登录盒子开始 -->
-    <div class=" box login">
+    <div class="box login">
         <div class="title">
             大事件后台管理系统
         </div>
@@ -48,18 +48,18 @@
             <!-- 用户名 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-username"></i>
-                <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                <input type="text" name="username" required  lay-verify="required|user" placeholder="请输入用户名" autocomplete="off" class="layui-input">
               
             </div>
             <!-- 密码 -->
             <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                  <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                  <input type="password" name="password" required lay-verify="required|len" placeholder="请输入密码" autocomplete="off" class="layui-input pwd">
             </div>
             <!-- 确认密码 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
-              <input type="password" name="password" required lay-verify="required" placeholder="请输入确认密码" autocomplete="off" class="layui-input">
+              <input type="password"  required lay-verify="required||len|same" placeholder="请输入确认密码" autocomplete="off" class="layui-input">
             </div>
             <!-- 注册按钮 -->
             <div class="layui-form-item">
