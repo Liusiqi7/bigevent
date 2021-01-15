@@ -1,0 +1,28 @@
+.layui-icon{
+    margin: 0 5px;
+    font-size: 16px;
+}
+.layui-icon-app{
+    display: inline-block;
+    margin-left: 20px;
+}
+.userinfo{
+    height:60px;
+    line-height: 60px;
+    text-align: center;
+}
+.text-avatar{
+    background-color: #419488;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+/* 因为新注册的用户没有图片,把用户名注册的第一个字符当头像,如果当前是字符头像,在用户登录的时候就换出现闪现问题,因为也不知道他是新注册的还是之前的,所以先把他们都隐藏掉 */
+.text-avatar, .layui-nav-img{
+    display: none;
+}
