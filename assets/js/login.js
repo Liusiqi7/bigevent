@@ -19,7 +19,7 @@ $('.register form').on('submit', function (e) {
             if (res.status === 0) { 
                 // JQ对象转为DOM对象,重置表单达到清空输入框的效果
                 $('.register form')[0].reset();
-                $('.login').show().next().hide();
+                // $('.login').show().next().hide();
             }
         }
 
@@ -61,6 +61,7 @@ $('.login form').on('submit', function (e) {
                 //登录成功,保存token,然后跳转到index页面
                 localStorage.setItem('token', res.token);
                 location.href = './index.html';
+                
             }
         }
     })

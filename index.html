@@ -1,3 +1,9 @@
+<!-- 页面一运行马上判断本地有没有token,不要等页面加载完毕 -->
+<script>
+  if (localStorage.getItem('token')===null){
+    location.href='./login.html';
+  }
+</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +34,8 @@
           <dd><a href="">重置密码</a></dd>
         </dl>
       </li>
-      <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-logout"></i> 退出</a></li>
+      <!-- 如果不加javascript:,一点击退出就跳转页面了 -->
+      <li class="layui-nav-item"><a href="javascript:;" id="logout"><i class="layui-icon layui-icon-logout"></i> 退出</a></li>
     </ul>
   </div>
   
@@ -67,7 +74,8 @@
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div style="padding: 15px;">内容主体区域</div>
+    <!-- <div style="padding: 15px;">内容主体区域不要了</div> -->
+    <iframe src="" frameborder="0"></iframe>
   </div>
   
   <div class="layui-footer">
@@ -77,5 +85,8 @@
 </div>
 
 <script src="./assets/lib/layui/layui.all.js"></script>
+<script src="./assets/lib/jquery.js"></script>
+<script src="./assets/js/common.js"></script>
+<script src=".//assets/js/index.js"></script>
 </body>
 </html>
